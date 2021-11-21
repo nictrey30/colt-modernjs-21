@@ -35,3 +35,10 @@ if (password.length >= 6) {
 } else {
   console.log('Password too short!');
 }
+// Example 5 - truthy / falsy values
+let loggedInUser = 'thomas123';
+if (!loggedInUser) {
+  console.log('Please log in.');
+} else {
+  console.log('You are logged in.');
+}
