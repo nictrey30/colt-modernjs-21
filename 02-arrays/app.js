@@ -26,3 +26,21 @@ console.log(shoppingList, shoppingList.pop());
 // slice - copy portion of an array
 // splice - remove/replace elements
 // sort - sorts an array
+
+let dishesToDo = ['large platter'];
+
+//to add to the start:
+dishesToDo.unshift('plate');
+
+//add to the start again:
+dishesToDo.unshift('cereal bowl');
+dishesToDo.unshift('spoon');
+
+//remove from the start:
+dishesToDo.shift();
+
+// concat arrays
+let fruits = ['apple', 'banana'];
+let veggies = ['cacarot', 'onion', 'pwla'];
+// console.log(fruits.concat(veggies));
+// console.log(veggies.concat(fruits));
