@@ -60,3 +60,11 @@ const game = {
     [null, 'O', 'X']
   ]
 };
+
+// array/object equality
+let nums = [1, 2, 3];
+let mistery = [1, 2, 3];
+let moreNums = nums;
+
+console.log(nums === mistery); // false
+console.log(nums === moreNums); // true
