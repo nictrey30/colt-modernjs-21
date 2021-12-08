@@ -49,14 +49,16 @@ const myStudents = [
     grade: 90
   }
 ];
-let sum = 0;
+let total = 0;
 for (let i = 0; i < myStudents.length; i++) {
   let student = myStudents[i];
   // console.log(`${student.firstName} has a grade of ${student.grade}`);
-  sum += student.grade;
+  total += student.grade;
 }
 console.log(
-  `The average grade of the students is ${(sum / myStudents.length).toFixed(2)}`
+  `The average grade of the students is ${(total / myStudents.length).toFixed(
+    2
+  )}`
 );
 // reverse a word
 const word = 'stressed';
@@ -65,3 +67,18 @@ for (let i = word.length - 1; i >= 0; i--) {
   reversedWord += word[i];
 }
 console.log(`THe reversed word ${word} is: ${reversedWord}`);
+// nested loops
+const gameBoard = [
+  [4, 32, 8, 4],
+  [64, 8, 32, 2],
+  [8, 32, 16, 4],
+  [2, 8, 4, 2]
+];
+let gameBoardSum = 0;
+for (let i = 0; i < gameBoard.length; i++) {
+  let row = gameBoard[i];
+  for (let i = 0; i < row.length; i++) {
+    gameBoardSum += row[i];
+  }
+}
+console.log(`The sum of the ${gameBoard} is ${gameBoardSum}`);
