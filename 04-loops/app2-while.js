@@ -31,3 +31,10 @@ console.log(
   } time, and the number was ${currentGuesses[currentGuesses.length - 1]}`
 );
 console.dir(currentGuesses);
+
+// break
+// while (true) {
+//   if (condition) {
+//     break;
+//   }
+// }
