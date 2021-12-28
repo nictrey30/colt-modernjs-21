@@ -45,3 +45,69 @@ const books = [
 const book = books.find((book) => book.rating >= 4.3);
 // Find first book with Neil Gaiman as an author:
 const book2 = books.find((book) => book.authors.includes('Neil Gaiman'));
+
+// FILTER  - creates a new array with all the elements that pass the test in the callback
+const nums = [34, 35, 67, 54, 109, 102, 32, 9];
+const otherBooks = [
+  {
+    title: 'Good Omens',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'Changing My Mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays']
+  },
+  {
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy']
+  },
+  {
+    title: 'American Gods',
+    authors: ['Neil Gaiman'],
+    rating: 4.11,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'A Gentleman in Moscow',
+    authors: ['Amor Towles'],
+    rating: 4.36,
+    genres: ['fiction', 'historical fiction']
+  },
+  {
+    title: 'The Name of the Wind',
+    authors: ['Patrick Rothfuss'],
+    rating: 4.54,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'The Overstory',
+    authors: ['Richard Powers'],
+    rating: 4.19,
+    genres: ['fiction', 'short stories']
+  },
+  {
+    title: 'The Way of Kings',
+    authors: ['Brandon Sanderson'],
+    rating: 4.65,
+    genres: ['Fantasy', 'epic']
+  },
+  {
+    title: 'Lord of the flies',
+    authors: ['William Golding'],
+    rating: 3.67,
+    genres: ['fiction']
+  }
+];
+const oddNums = nums.filter((num) => num % 2 === 1);
+// books that have the rating greater than 4.3
+const goodBooks = otherBooks.filter((book) => book.rating >= 4.3);
+// only fantasy books
+const fantasyBooks = otherBooks.filter((book) =>
+  book.genres.map((genre) => genre.toLowerCase()).includes('fantasy')
+);
