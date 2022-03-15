@@ -38,3 +38,9 @@ const myDeck = {
     }
   }
 };
+
+myDeck.initializeDeck();
+myDeck.shuffle();
+const h1 = myDeck.drawMultiple(2);
+const h2 = myDeck.drawMultiple(2);
+const h3 = myDeck.drawMultiple(5);
