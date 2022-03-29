@@ -13,3 +13,15 @@ for (let li of allLis) {
 }
 
 // innerHtml is gonna return not only the text inside an element, but also all other tags inside a given element
+
+// getting and setting attributes
+const range = document.querySelector('input[type="range"]');
+console.log(range.getAttribute('min'));
+range.setAttribute('min', 200);
+
+// Finding parent/children/siblings
+const firstLI = document.querySelector('li');
+// firstLI.parentElement
+// firstLI.nextElementSibling
+const ul = document.querySelector('ul');
+// ul.children
