@@ -42,3 +42,10 @@ i.innerText = 'I am Italics';
 firstP.insertAdjacentElement('beforebegin', i);
 
 // append is diffrent from appendChild in that we can insert multiple elements at once
+
+// removeChild and remove
+// remove only needs a reference to the child. removeChild needs a reference both to the parent and the child. The result is identical.
+const ul = document.querySelector('section ul');
+const peasLi = ul.querySelector('li.special');
+const deleted = ul.removeChild(peasLi);
+// remove doesn't need the parent - it removes the target we call the method upon
