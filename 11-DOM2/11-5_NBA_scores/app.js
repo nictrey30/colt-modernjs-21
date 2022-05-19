@@ -89,4 +89,22 @@ const warriorsGames = [
 const ulParent = document.createElement('ul');
 for (let game of warriorsGames) {
   const { homeTeam, awayTeam } = game;
+  // create an li for each game
+  const gameLi = document.createElement('li');
+  // destructuring by giving a new name
+  const { team: hTeam, points: hPoints } = homeTeam;
+  const { team: aTeam, points: aPoints } = awayTeam;
+  const teamNames = `${aTeam} @ ${hTeam}`;
+  let scoreLine = '';
+  // select the score that have won and bold it
+  if (aPoints > hPoints) {
+    scoreLine = `<b>${aPoints}</b> - ${hPoints}`;
+  } else {
+    scoreLine = `${aPoints} - <b>${hPoints}</b>`;
+  }
+
+  gameLi.innerHTML = `${teamNames} ${scoreLine}`;
+  ulParent.appendChild(gameLi);
 }
+
+document.body.prepend(ulParent);
