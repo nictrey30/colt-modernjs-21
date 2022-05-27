@@ -1,12 +1,8 @@
 const btn = document.querySelector('button');
 
-btn.addEventListener('click', function () {
-  alert('CLICKED!!!');
-});
+btn.addEventListener('click', () => alert('CLICKED'));
 
-btn.addEventListener('click', function () {
-  console.log('SECOND THING!!');
-});
+btn.addEventListener('click', () => console.log('SECOND THING'));
 
 btn.addEventListener('mouseover', function () {
   btn.innerText = 'STOP TOUCHING ME';
