@@ -29,7 +29,9 @@ const person2 = 'James Cameron';
 
 // USING COMPUTED PROPERTIES!
 const team = {
+  // key of 'host'
   [role]: person,
+  // key of 'Director'
   [role2]: person2,
   [1 + 6 + 9]: 'sixteen'
 };
