@@ -9,6 +9,7 @@ const colors = [
   'violet'
 ];
 
+// by using function() and not () =>, we can keep the this of the calling element, 'box' in this case
 const changeColor = function () {
   const h1 = document.querySelector('h1');
   h1.style.color = this.style.backgroundColor;
