@@ -29,7 +29,7 @@ const formData = {};
 // 2nd method by  adding a name attribute to the input in html
 for (let input of [creditCardInput, termsCheckbox, veggieSelect]) {
   input.addEventListener('input', (e) => {
-    formData[e.target.name] =
-      input !== termsCheckbox ? e.target.value : e.target.checked;
+    const { name, type, value, checked } = e.target;
+    formData[name] = type === 'checkbox' ? checked : value;
   });
 }
