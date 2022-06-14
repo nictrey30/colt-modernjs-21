@@ -1,0 +1,8 @@
+A Promise is an javascript object representing the eventual completion or failure of an asynchronous operation.
+A Promise is a way of promising a value that you may not have at the moment, and we attach callbacks to that object.
+A Promise is a returned object to which you attach callbacks, instead of passing callbacks into a function.
+
+A Promise always has 2 parameters: resolve and reject, and they are actually functions and at any point in the Promise if we call them, the Promise will be resolved or rejected.
+If we don't resolve or reject a Promise, its status or its value will be "pending".
+
+- every Promise has a .then() method and this method will run if our Promise is resolved and another one called .catch(), which will run if the Promise is rejected
