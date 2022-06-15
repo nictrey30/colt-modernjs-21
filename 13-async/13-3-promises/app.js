@@ -16,6 +16,7 @@
 //   });
 
 // we frequently return a Promise from a function
+// when you reject or resolve a promise, you can resolve or reject a Promise with a value
 const makeDogPromise = () =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
