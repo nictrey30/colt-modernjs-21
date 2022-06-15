@@ -12,23 +12,19 @@ const fakeRequest = (url) => {
             username: 'Esmeralda'
           }
         ],
-        '/users/1': [
-          {
-            id: 1,
-            username: 'Bilbo',
-            upvotes: 360,
-            city: 'Lisbon',
-            topPostId: 454321
-          }
-        ],
-        '/users/5': [
-          {
-            id: 5,
-            username: 'Esmeralda',
-            upvotes: 571,
-            city: 'Honolulu'
-          }
-        ],
+        '/users/1': {
+          id: 1,
+          username: 'Bilbo',
+          upvotes: 360,
+          city: 'Lisbon',
+          topPostId: 454321
+        },
+        '/users/5': {
+          id: 5,
+          username: 'Esmeralda',
+          upvotes: 571,
+          city: 'Honolulu'
+        },
         '/posts/454321': {
           id: 454321,
           title: 'Ladies and gentlemen, may I introduce my pet pig, Hamlet'
@@ -51,14 +47,17 @@ const fakeRequest = (url) => {
 // if we return a Promise, then we can chain .then() method
 fakeRequest('/users')
   .then((res) => {
+    console.log(res);
     const id = res.data[0].id;
     return fakeRequest(`/users/${id}`);
   })
   .then((res) => {
-    const postId = res.data[0].topPostId;
+    console.log(res);
+    const postId = res.data.topPostId;
     return fakeRequest(`/posts/${postId}`);
   })
   .then((res) => {
+    console.log(res);
     console.log(res.data.title);
   })
   .catch((data) => {
