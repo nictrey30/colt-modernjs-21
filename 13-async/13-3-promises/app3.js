@@ -11,7 +11,11 @@ const moveX = (element, amount, delay) => {
       // check if the btn right margin is going over the right margin of the body
       if (elRight + amount > bodyBoundry) {
         // reject the Promise if we can't move
-        reject();
+        reject({
+          bodyBoundry,
+          elRight,
+          amount
+        });
       } else {
         element.style.transform = `translateX(${currLeft + amount}px)`;
         resolve();
@@ -20,6 +24,16 @@ const moveX = (element, amount, delay) => {
   });
 };
 
-moveX(btn, 300, 1000).then(() => {
-  console.log('Done moving');
-});
+moveX(btn, 100, 1000)
+  // the arrow function return Promises, so we can chain the .then()
+  .then(() => moveX(btn, 200, 1000))
+  .then(() => moveX(btn, 300, 1000))
+  .then(() => {
+    console.log('done');
+  })
+  .catch(({ bodyBoundry, elRight, amount }) => {
+    console.log(`Body is ${bodyBoundry}px wide`);
+    console.log(
+      `Element is at ${Math.floor(elRight)}px, ${amount}px is too large`
+    );
+  });
