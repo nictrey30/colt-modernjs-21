@@ -10,6 +10,7 @@ function avgArray(arr) {
       }
     }
     // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+    // total - the initialValue, or the previously returned value of the function.
     sum = arr.reduce((a, b) => a + b, 0);
     return (sum / arr.length).toFixed(1);
   }

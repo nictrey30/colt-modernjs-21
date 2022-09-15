@@ -3,22 +3,24 @@
 // }
 
 //Recreating the above for loop w/ a while loop:
-let i = 0;
-while (i <= 5) {
-  console.log(i);
-  i++;
-}
+// let i = 0;
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
 
 // guessing game
 let currentGuesses = [];
 const target = Math.floor(Math.random() * 10) + 1;
 console.log(`The target is: ${target} `);
 let guess = Math.floor(Math.random() * 10) + 1;
+console.log(`current guess: ${guess}`);
 currentGuesses.push(guess);
 while (!currentGuesses.includes(target)) {
   while (currentGuesses.includes(guess)) {
     guess = Math.floor(Math.random() * 10) + 1;
   }
+  console.log(`current guess: ${guess}`);
   currentGuesses.push(guess);
 }
 console.log(

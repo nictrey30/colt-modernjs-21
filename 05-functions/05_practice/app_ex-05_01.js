@@ -10,11 +10,11 @@
 // isValidPassword('89Fjj1nms', 'dogLuvr'); //true
 // isValidPassword('dogLuvr123!', 'dogLuvr'); //false
 
-function isValidPassword(pass, user) {
-  if (pass && user)
-    return pass.length > 8 && pass.indexOf(' ') === -1 && !pass.includes(user);
-  return false;
-}
+const isValidPassword = (pass, user) =>
+  pass && user
+    ? pass.length > 8 && pass.indexOf(' ') === -1 && !pass.includes(user)
+    : false;
+
 console.log(isValidPassword('89Fjj1nms', 'dogLuvr')); //true
 console.log(isValidPassword('dogLuvr123!', 'dogLuvr')); //false
 console.log(isValidPassword('hello1', 'dogLuvr')); //false
