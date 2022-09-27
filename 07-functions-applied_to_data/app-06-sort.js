@@ -7,8 +7,8 @@ const badSort = prices.slice().sort();
 
 // compare function - specifies a function that defines the sort order.
 // compareFunction(a, b) return value
-// > 0	sort b before a
 // < 0	sort a before b
+// > 0	sort b before a
 // === 0	keep original order of a and b
 // Note: compareFunction(a, b) must always return the same value when given a specific pair of elements a and b as its two arguments.
 // function compare(a, b) {

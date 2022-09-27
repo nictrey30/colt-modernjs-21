@@ -14,7 +14,9 @@ let movies = [
   'Mr. Deeds'
 ];
 // Find first movie that includes 'Mrs' in its title:
+// the callback must be a boolean function that returns true or false
 let movie = movies.find((movie) => movie.includes('Mrs'));
+
 // Find first movie that begins with 'Mrs':
 // The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
 let movie2 = movies.find((movie) => movie.indexOf('Mrs') === 0);
