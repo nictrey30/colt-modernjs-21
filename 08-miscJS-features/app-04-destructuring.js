@@ -64,5 +64,3 @@ const results = [
     country: 'United States'
   }
 ];
-
-const [, { first: silverMedal, country: silverMedal }] = results;
