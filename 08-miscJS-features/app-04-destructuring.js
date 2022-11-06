@@ -64,3 +64,8 @@ const results = [
     country: 'United States'
   }
 ];
+
+// extracting country from the 2nd object
+// const [, { country: country_2 }] = results;
+const [, silverMedal] = results;
+const { country: silverCountry } = silverMedal; // silverCountry -> 'Ethiopia'
