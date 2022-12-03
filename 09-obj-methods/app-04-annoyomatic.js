@@ -8,7 +8,7 @@ const annoyer = {
     "Can't Stop, Won't Stop"
   ],
   pickPhrase() {
-    const { phrases } = this;
+    const { phrases } = this; // equivalent to: const phrases = this.phrases;
     // random index from the phrases array
     const idx = Math.floor(Math.random() * phrases.length);
     return phrases[idx];

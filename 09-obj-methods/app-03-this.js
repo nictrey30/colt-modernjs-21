@@ -1,6 +1,7 @@
 function sayHi() {
   console.log('HI');
-  //this refers to the window (global scope object in the browser)
+  // this refers to the window (global scope object in the browser)
+  // this is the current execution scope
   console.log(this);
 }
 
